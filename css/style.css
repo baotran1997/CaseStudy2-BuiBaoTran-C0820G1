@@ -1,0 +1,801 @@
+
+* {
+    
+    font-family: Lucida Bright;
+    /* overflow-x: hidden; */
+
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  
+
+  /*---------------------------------------
+  TYPOGRAPHY              
+-----------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 50px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 0;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  
+}
+
+h4 {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+p {
+  color: #505050;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+}
+  
+
+/*---------------------------------------
+  MENU             
+-----------------------------------------*/
+
+.custom-navbar {
+    margin-bottom: 0;
+    background-color: #000000;
+    padding: 20px 0;
+  }
+
+.custom-navbar .navbar-brand {
+    color: #f9f9f9;
+    font-weight: normal;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.custom-navbar .nav li a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #f9f9f9;
+    letter-spacing: 0.5px;
+   
+    transition: all ease-in-out 0.4s;
+    padding: 0;
+    margin: 15px 20px;
+
+    display: inline-block;
+   
+}
+
+.custom-navbar .nav li a:hover {
+    border-bottom: 1px solid #ffffff;
+    
+   
+}
+.custom-navbar .nav li a:focus {
+    border-bottom: 1px solid #ffffff;
+}
+
+
+.custom-navbar button:focus {
+    outline: none;
+    border: none;
+  }
+  
+  .custom-navbar .navbar-toggle {
+    background-color: transparent;
+  }
+  
+  .custom-navbar .navbar-toggle .navbar-toggler-icon {
+    background: #ffffff;
+    border-color: transparent;
+  }
+
+ 
+ 
+  /*---------------------------------------
+  slide image
+-----------------------------------------*/
+.owl-carousel {
+  margin-top: 10px;
+}
+.bannerContainer{
+  position: relative;
+}
+
+/*---------------------------------------
+  banner      
+-----------------------------------------*/
+
+
+
+
+
+ /*---------------------------------------
+  slide          AND  BANNER PRODUCT
+-----------------------------------------*/
+#home { 
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    padding-top: 10em;
+  }
+
+  #home h1 {
+    color: #ffffff;
+    font-size: 4em;
+    line-height: 1.2em;
+  }
+
+  #home p {
+    color: rgba(250, 250, 250, 0.5);
+  }
+  
+  #home .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* bottom: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
+  }
+  #home .overlay img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
+  }
+
+/*---------------------------------------
+  BUTTON    
+-----------------------------------------*/
+
+.section-btn
+  {
+    margin: 32px 0 0 0;
+    padding: 0;
+    
+  }
+  
+  .section-btn a
+   {
+    line-height: 45px;
+    
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    color: #ffffff;
+    font-weight: normal;
+  }
+  
+  .section-btn a span,
+  .productDetail .section-btn a span{
+    position: relative;
+    display: inline-block;
+    
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    padding: 0 25px;
+    background: red;
+    border-radius: 1px;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    overflow-x: visible;
+  }
+
+  .section-btn a span:hover,
+  .productDetail .section-btn a span:hover {
+      background-color: rgb(245, 57, 57);
+      color: white;
+  }
+  
+  .section-btn a span::before,
+  .productDetail .section-btn a span::before
+  {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    border-radius: 1px;
+    color: #ffffff;
+    padding: 0 25px;
+    content: attr(data-hover);
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+  }
+  
+  .section-btn a:hover span,
+  .section-btn a:focus span,
+  .productDetail .section-btn a:hover span,
+  .productDetail .section-btn a:focus span
+  {
+    -webkit-transform: rotateX(90deg) translateY(-22px);
+    -moz-transform: rotateX(90deg) translateY(-22px);
+    transform: rotateX(90deg) translateY(-22px);
+  } 
+  
+  .csstransforms3d .section-btn a:hover span::before,
+  .csstransforms3d .section-btn a:focus span::before,
+  .productDetail .section-btn a:hover span,
+  .productDetail .section-btn a:focus span
+  {
+    background: #000000;
+  }
+
+  @media screen and (max-width: 625px) {
+    .section-btn a span {
+         font-size: 105x;
+         word-wrap: initial;
+    }
+
+}
+
+/*---------------------------------------
+  BODY HOME    
+-----------------------------------------*/
+
+
+
+#bodyHome {
+    clear: both;
+    background-color: #ffffff;
+    padding: 7em;
+
+    
+    }
+
+@media screen and (max-width: 768px) {
+        
+     #bodyHome{
+      padding: 3em 0;
+     }
+
+ }
+
+
+.bodyHome-heading h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #000;
+    text-transform: uppercase;
+    position: relative;
+
+}
+
+.bodyHome-heading h2:after {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    width: 60px;
+    height: 2px;
+    margin: 0 auto;
+    background: #F85A16;
+    content: '';
+    }
+
+.bodyHome-heading p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #828282;
+
+    padding-bottom: 20px;
+}
+
+.bodyHome-heading span {
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    }
+
+#bodyHome-heading-list {
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+        }
+
+#bodyHome-heading-list li {
+    display: block;
+    padding: 0;
+    margin: 0 0 15px 1%;
+    list-style: none;
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    clear: left;
+    position: relative;
+ }
+
+@media screen and (max-width: 480px) {
+    #bodyHome-heading-list li {
+              margin-left: 0;
+    }
+
+}
+
+ #bodyHome-heading-list li a {
+    min-height: 400px;
+    padding: 2em;
+    position: relative;
+    width: 100%;
+    display: block;
+ }
+
+#bodyHome-heading-list li a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    z-index: 80;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    background: transparent;
+}
+
+#bodyHome-heading-list li a:hover:before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#bodyHome-heading-list li a .case-studies-summary {
+    width: auto;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    position: absolute;
+    z-index: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #bodyHome-heading-list li a .case-studies-summary {
+        bottom: 1em;
+        left: 1em;
+        right: 1em;
+    }
+ }
+
+#bodyHome-heading-list li a .case-studies-summary span {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+}
+
+#bodyHome-heading-list li a .case-studies-summary h2 {
+        color: #fff;
+        margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    #bodyHome-heading-list li a .case-studies-summary h2 {
+    font-size: 20px;
+}
+}
+
+
+    #bodyHome-heading-list li.two-third {
+    width: 48.6%;
+}
+
+@media screen and (max-width: 768px) {
+    #bodyHome-heading-list li.two-third {
+              width: 49%;
+    }
+}
+
+
+ @media screen and (max-width: 480px) {
+    #bodyHome-heading-list li.two-third {
+         width: 100%;
+    }
+}
+
+#bodyHome-heading-list li.one-third {
+    width: 23.8%;
+}
+
+@media screen and (max-width: 768px) {
+    #bodyHome-heading-list li.one-third {
+    width: 49%;
+     }
+}
+
+@media screen and (max-width: 480px) {
+    #bodyHome-heading-list li.one-third {
+        width: 100%;
+    }
+}
+
+#bodyHome-heading-list li.one-half {
+    width: 49%;
+ }
+
+ @media screen and (max-width: 480px) {
+    #bodyHome-heading-list li.one-half {
+     width: 100%;
+    }
+}
+/*---------------------------------------
+  SLIDE PRODUCT
+-----------------------------------------*/
+
+
+
+/*---------------------------------------
+  SHOW PRODUCT
+-----------------------------------------*/
+.showProduct {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  text-align: center;
+  clear: both;
+
+}
+
+.showProduct .product-image {
+  border-radius: 10px;
+
+  
+}
+
+/* .showProduct row {
+  margin: 20px 0;
+} */
+
+.showProduct .title {
+  color: #000;
+  margin-top: 20px;
+  min-height: 60px;
+}
+
+.showProduct .price {
+  margin: 0 0 20px 0;
+  font-size: larger;
+  font-weight: bolder;
+
+  display: inline-block;
+}
+
+.showProduct .product-view {
+  text-decoration: none;
+  display: block;
+  
+  
+  background-color: red;
+  border-radius: 3px;
+  color: white;
+
+  width: 50%;
+ 
+  margin-left: 25%;
+  margin-bottom: 30px;
+  padding: 5px ;
+  
+}
+
+/* .showProduct .product-view:hover {
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+} */
+/*---------------------------------------
+  FOOTER
+-----------------------------------------*/
+
+footer {
+    clear: left;
+    padding: 50px;
+    background-color: #000000;
+    margin-top: 200px;
+ }
+
+footer h3 {
+    padding-top: 12px;
+    color: #ffffff;
+    font-weight: lighter;
+  }
+  
+  footer a {
+    color: #505050;
+    font-weight: lighter;
+  }
+  /*---------------------------------------
+  SOCIAL ICON             
+-----------------------------------------*/
+
+.social-icon {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .social-icon li {
+    display: inline-block;
+    list-style: none;
+  }
+  
+  .social-icon li a {
+    border-radius: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 30px;
+    text-decoration: none;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    text-align: center;
+    position: relative;
+    margin: 4px 8px 0 8px;
+  }
+  
+  .social-icon li a i:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  @media (max-width: 580px) {
+    #home h1 {
+      font-size: 30px;
+    }
+
+    #home p {
+        font-size: 15px;
+    }
+}
+
+
+ /*---------------------------------------
+  ADD TO CART             
+-----------------------------------------*/
+  
+.addToCart {
+  margin: 150px 0px;
+
+  letter-spacing: 2px;
+  
+}
+
+
+.addToCart th, td, tr {
+  text-align: center;
+}
+
+.addToCart .inputQuantity {
+  padding: 2px;
+  text-align: center;
+  width: 40px;
+  border: none;
+  height: 32px;
+}
+
+.addToCart .changeQuantity {
+  background-color: #f5f5f5;
+  color: #000;
+  font-weight: bolder;
+  border: #f5f5f5;
+
+  cursor: pointer;
+  width: 30px;
+  height: 32px;
+  padding: 2px;
+  text-align: center;
+}
+
+.addToCart .changeQuantity:hover {
+  text-decoration: none;
+}
+
+.addToCart .total, .price {
+  font-family: Garamond;
+  font-weight: bolder;
+
+  font-size: 23px;
+}
+
+ .continueShopping a {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.addToCart .continueShopping a {
+  text-decoration: none;
+}
+
+ /*---------------------------------------
+  PRODUCT DETAIL            
+-----------------------------------------*/
+
+.productDetail {
+  margin: 150px auto;
+
+  letter-spacing: 2px;
+  border-bottom: 20px;
+}
+
+.textProductDetail  {
+ font-size: larger;
+ font-weight: bolder;
+ text-align: left;
+}
+
+.productDetail th, .priceProductDetail {
+  font-size: larger;
+ font-weight: bolder;
+
+ border-top: none;
+}
+
+
+.horizontalText {
+  display: flex; 
+  flex-direction: row;
+ 
+  width: 90%;
+ margin-left: 5%;
+ margin-top: 20px;
+ font-size: 2rem;
+ 
+  color: black;
+
+  
+}
+
+
+.horizontalText:before, 
+.horizontalText:after { 
+    content: ""; 
+    flex: 1 1; 
+    border-bottom: 2px solid #000; 
+    margin: auto; 
+  
+} 
+
+.textHori {
+  padding: 0 10px;
+  
+ font-size: 2rem;
+ font-weight: bolder;
+  color: black;
+}
+
+
+
+/*---------------------------------------
+  CHECK OUT          
+-----------------------------------------*/
+
+.checkOut {
+  
+    margin: 60px auto;
+  
+    letter-spacing: 2px;
+  
+}
+
+.checkOutContact {
+  text-align: center;
+  padding-bottom: 20px;
+
+}
+
+.checkOut button {
+  margin-top: 20px;
+  letter-spacing: 3px;
+  background-color: red;
+
+  margin-bottom: 20px;
+}
+
+.imageSuccess {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*---------------------------------------
+  ORDER SUMMARY        
+-----------------------------------------*/
+.orderSummary {
+  background-color: #fafafa;
+  color: #000;
+ 
+  font-weight: bolder;
+
+  padding-top: 30px;
+  line-height: 50px;
+ 
+  text-align: center;
+  border-radius: 10px;
+  
+
+}
+
+
+@media (max-width: 989px) {
+  .orderSummary {
+    margin: 40px;
+    
+  }
+
+
+}
