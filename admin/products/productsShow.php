@@ -4,7 +4,7 @@ include __DIR__ . '/../database/database.php';
 
 
 
-$sql = 'SELECT products.product_code, products.product_name, categories.category_name, products.product_introduction, products.product_specification, products.product_image, products.product_price, products.product_stock
+$sql = 'SELECT products.product_code, products.product_name, categories.category_name, products.product_introduction, products.product_specification, products.product_image, products.product_price
         FROM ( products
         INNER JOIN categories ON products.category_id = categories.category_id)';
 $result = $conn->query($sql);
@@ -37,7 +37,7 @@ $result = $result->fetchAll();
                         <th>Product Specification</th>
                         <th>Image</th>
                         <th>Price</th>
-                        <th>Stock</th>
+                        <th></th>
                         <th></th>
                     </tr>
                 </thead>
@@ -52,10 +52,11 @@ $result = $result->fetchAll();
                         <td><?= $value['product_specification'];  ?></td>
                         <td><img class="image" src="<?= $value['product_image']; ?>" style="width: 150px;" alt=""></td>
                         <td>$<?= $value['product_price']; ?></td>
-                        <td><?= $value['product_stock']; ?>pcs</td>
                         <td>
-                            <a href="productsEdit.php?id=<?= $value['product_code'] ?>">Edit</a>
-                            <a href="productsDelete.php?id=<?= $value['product_code'] ?>">Delete</a>
+                            <a class="btn btn-info" href="productsEdit.php?id=<?= $value['product_code'] ?>">Edit</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" href="productsDelete.php?id=<?= $value['product_code'] ?>">Delete</a>
                         </td>
                     </tr>
 

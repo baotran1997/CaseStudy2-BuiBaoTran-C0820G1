@@ -47,8 +47,8 @@ $result = $result->fetchAll();
                         <td>$<?= $value['price_each']; ?></td>
 
                         <td>
-                            <a href="orderDetailEdit.php?id=<?= $value['order_number'] ?>">Edit</a>
-                            <a href="orderDetailDelete.php?id=<?= $value['id_orderdetail'] ?>">Delete</a>
+                            <a class="btn btn-primary" href="orderDetailEdit.php?id=<?= $value['order_number'] ?>">Edit</a>
+                            <a class="btn btn-danger" href="orderDetailDelete.php?id=<?= $value['id_orderdetail'] ?>">Delete</a>
                         </td>
                     </tr>
 

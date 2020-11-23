@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="customerID">Customer Name:</label>
                     <select class="form-control" name="customerID" id="customerID">
                         <?php foreach ($resultCustomer as $value) : ?>
-                            <option value="<?= $value['customer_id'] ?>"><?= $value['customer_id'] ?></option>
+                            <option value="<?= $value['customer_id'] ?>"><?= $value['customer_name'] ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>

@@ -14,7 +14,6 @@ $productIntro = '';
 $productSpec = '';
 $productPrice = '';
 $image = '';
-$productStock = '';
 $category = '';
 
 
@@ -41,17 +40,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $image = $_POST['image'];
     }
 
-    if (isset($_POST['productStock'])) {
-        $productStock = $_POST['productStock'];
-    }
+   
 
     if (isset($_POST['category'])) {
         $category = $_POST['category'];
     }
 
 
-    $sql = "INSERT INTO products ( product_name, category_id, product_introduction, product_specification, product_image, product_price, product_stock) 
-    VALUES ( '$productName', '$category', '$productIntro', '$productSpec', '$image', '$productPrice', '$productStock') ";
+    $sql = "INSERT INTO products ( product_name, category_id, product_introduction, product_specification, product_image, product_price) 
+    VALUES ( '$productName', '$category', '$productIntro', '$productSpec', '$image', '$productPrice') ";
 
     $result = $conn->query($sql);
 
@@ -95,10 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="image">Image</label>
                     <input type="text" class="form-control" name="image" id="image">
                 </div>
-                <div class="form-group">
-                    <label for="productStock">Stock</label>
-                    <input type="text" class="form-control" name="productStock" id="productStock">
-                </div>
+                
                 <div class="form-group">
                     <label for="category">Category:</label>
                     <select class="form-control" name="category" id="category">

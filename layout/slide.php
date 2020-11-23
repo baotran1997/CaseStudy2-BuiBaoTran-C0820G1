@@ -1,6 +1,6 @@
 <section id="home">
     <div class="overlay">
-    <video controls autoplay loop muted>
+    <video autoplay loop muted playsInline>
         <source src="video/gym.mp4" type="video/mp4">
         <source src="video/gym.ogv" type="video/ogg">
         <source src="video/gym.webm" type="video/webm">

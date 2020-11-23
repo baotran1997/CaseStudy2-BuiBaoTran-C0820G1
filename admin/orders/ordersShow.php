@@ -49,8 +49,8 @@ $result = $result->fetchAll();
                         <td><?= $value['required_date']; ?></td>
                         <td><?= $value['comment'];  ?></td>
                         <td>
-                            <a href="ordersEdit.php?id=<?= $value['order_number'] ?>">Edit</a>
-                            <a href="ordersDelete.php?id=<?= $value['order_number'] ?>">Delete</a>
+                            <a class="btn btn-primary" href="ordersEdit.php?id=<?= $value['order_number'] ?>">Edit</a>
+                            <a class="btn btn-danger" href="ordersDelete.php?id=<?= $value['order_number'] ?>">Delete</a>
                         </td>
                     </tr>
 

@@ -30,6 +30,7 @@ $resultCustomer = $resultCustomer->fetchAll();
                         <th>Customer Address</th>
                         <th>Customer City</th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
 
@@ -44,7 +45,9 @@ $resultCustomer = $resultCustomer->fetchAll();
                         <td><?= $value['customer_city']; ?></td>
                         <td>
                             <a class="btn btn-info" href="customersEdit.php?id=<?= $value['customer_id'] ?>">Edit</a>
-                            <a class="btn btn-info" href="customersDelete.php?id=<?= $value['customer_id'] ?>">Delete</a>
+                        </td> 
+                        <td>
+                            <a class="btn btn-danger" href="customersDelete.php?id=<?= $value['customer_id'] ?>">Delete</a>
                         </td>
                     </tr>
 

@@ -15,7 +15,6 @@ $productIntro = '';
 $productSpec = '';
 $productPrice = '';
 $image = '';
-$productStock = '';
 $category = '';
 
 // get id from edit button in productsShow.php
@@ -52,10 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $image = $_POST['image'];
     }
 
-
-    if (isset($_POST['productStock'])) {
-        $productCode = $_POST['productStock'];
-    }
 
     if (isset($_POST['category'])) {
         $category = $_POST['category'];
@@ -107,10 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="image">Image</label>
                     <input type="text" class="form-control" name="image" id="image" value="<?= $allProduct['product_image']; ?>">
                 </div>
-                <div class="form-group">
-                    <label for="productStock">Stock</label>
-                    <input type="text" class="form-control" name="productStock" id="productStock" value="<?= $allProduct['product_stock']; ?>">
-                </div>
+               
                 <div class="form-group">
                     <label for="category">Category:</label>
                     <select class="form-control" name="category" id="category">
